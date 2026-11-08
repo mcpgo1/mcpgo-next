@@ -70,4 +70,4 @@ public/mcpgo-real-example.png — побайтовая копия предост
 
 Этот репозиторий содержит только Next.js-сайт и **не** публикует само настольное приложение McpGo. Инструкции для создания GitHub-репозитория сайта, интеграции с Vercel и подключения `mcpgo.ru`: **[DEPLOYMENT.md](./DEPLOYMENT.md)**.
 
-Для корректной сборки используйте Node.js 22 и `npm ci`. GitHub Actions проверяет исходники на `main` и PR; деплой выполняется штатной Git-интеграцией Vercel, без доступа к локальным файлам или ключам туннелей.
+Для корректной сборки используйте Node.js 22 и `npm ci`. GitHub Actions проверяет исходники на `main` и PR. Для автодеплоя в существующий проект Vercel предусмотрен отдельный [workflow](.github/workflows/deploy-vercel.yml) с project-scoped токеном; процедура его включения описана в [DEPLOYMENT.md](./DEPLOYMENT.md).
