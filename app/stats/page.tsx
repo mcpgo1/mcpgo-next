@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./stats.css";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, BarChart3, ChartNoAxesCombined, ExternalLink, Globe2, LockKeyholeOpen, ShieldOff, Sparkles } from "lucide-react";
+import { ArrowDownToLine, ArrowLeft, ArrowUpRight, BarChart3, ChartNoAxesCombined, ExternalLink, Github, Globe2, LockKeyholeOpen, ShieldOff, Sparkles } from "lucide-react";
 import { publicPath } from "../site-path";
 
 const allowedHosts = new Set(["cloud.umami.is"]);
@@ -20,6 +20,7 @@ function getPublicShareUrl(): string | null {
 }
 
 const shareUrl = getPublicShareUrl();
+const eventsUrl = shareUrl ? `${shareUrl.replace(/\/$/, "")}/events` : null;
 
 export const metadata: Metadata = {
   title: "Статистика посещений",
@@ -52,7 +53,20 @@ export default function StatsPage() {
           </div>
         </header>
 
-        <div className="stats-section-label"><BarChart3 size={17} aria-hidden="true" /><span>ОБЗОР ТРАФИКА</span><span className="stats-label-line" /></div>
+        <div className="stats-section-label"><ArrowDownToLine size={17} aria-hidden="true" /><span>КЛИКИ ПО КНОПКАМ</span><span className="stats-label-line" /></div>
+        <div className="stats-action-summary">
+          <div className="stats-action-tile"><span className="stats-action-icon"><ArrowDownToLine size={20} aria-hidden="true" /></span><div><strong>Скачивание McpGo</strong><span>Событие <code>download_click</code> · две кнопки DMG</span></div></div>
+          <div className="stats-action-tile"><span className="stats-action-icon"><Github size={20} aria-hidden="true" /></span><div><strong>Переходы на GitHub</strong><span>Событие <code>github_click</code> · репозиторий, документация, Issues</span></div></div>
+        </div>
+        {eventsUrl ? (
+          <section className="stats-dashboard stats-events-dashboard" aria-label="Количество кликов по скачиванию и GitHub">
+            <div className="stats-dashboard-head"><div><span className="stats-dashboard-eyebrow">CLICKS / EVENTS</span><strong>Нажатия и источники кликов</strong></div><a className="stats-open-link" href={eventsUrl} target="_blank" rel="noopener noreferrer nofollow"><ExternalLink size={15} aria-hidden="true" /> Открыть события</a></div>
+            <iframe src={eventsUrl} title="Клики по скачиванию McpGo и по GitHub — события Umami" className="stats-embed stats-events-embed" loading="eager" referrerPolicy="no-referrer" />
+            <p className="stats-embed-footnote">Количество нажатий смотри в разделе Events. Вкладка Properties показывает, где нажали кнопку. Учитываются клики, а не подтверждённые скачивания файла. Данные собираются с момента публикации счётчика.</p>
+          </section>
+        ) : null}
+
+        <div className="stats-section-label stats-traffic-heading"><BarChart3 size={17} aria-hidden="true" /><span>ОБЗОР ТРАФИКА</span><span className="stats-label-line" /></div>
         <section className="stats-dashboard" aria-label="Статистика посещений сайта">
           {shareUrl ? (
             <>

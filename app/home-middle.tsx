@@ -30,7 +30,7 @@ export function Install(){
      <div className="requirement"><Check size={15}/> OpenAI Platform с правами на Tunnels</div>
      <div className="requirement"><Check size={15}/> Google Chrome — только для браузерных задач</div>
      <div className="requirements-bundled"><CheckCircle2 size={16}/> Node.js, Python и локальные компоненты уже включены в DMG.</div>
-     <a href={`${DOCS}/ONBOARDING.md`} target="_blank" rel="noopener noreferrer">Подробно о мастере подключения <ArrowUpRight size={15}/></a>
+     <a href={`${DOCS}/ONBOARDING.md`} target="_blank" rel="noopener noreferrer" data-umami-event="github_click" data-umami-event-placement="install" data-umami-event-destination="onboarding">Подробно о мастере подключения <ArrowUpRight size={15}/></a>
     </div>
     <p className="install-caution"><span>!</span> McpGo 2.0.3 уже опубликован: DMG подписан и нотарифицирован Apple. Версия рассчитана на macOS 14+ и Apple Silicon.</p>
    </aside>
@@ -43,7 +43,7 @@ export function Install(){
          <div><strong>02</strong><span><b>Перетащи</b> McpGo.app в папку «Программы».</span></div>
          <div><strong>03</strong><span><b>Открой</b> приложение и выбери «Первое подключение».</span></div>
        </div>
-       <a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary"><Download size={17}/> Скачать McpGo 2.0.3 (.dmg) <ArrowUpRight size={16}/></a>
+       <a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-umami-event="download_click" data-umami-event-placement="install" data-umami-event-file="McpGo-2.0.3-macos-arm64.dmg"><Download size={17}/> Скачать McpGo 2.0.3 (.dmg) <ArrowUpRight size={16}/></a>
      </div>
      <div className="tunnel-focus">
        <div className="tunnel-focus-head"><LockKeyhole size={19}/><div><strong>Самое главное — два Secure MCP Tunnel</strong><span>Мастер проведёт через их создание, ключи доступа и подключение к ChatGPT.</span></div></div>
@@ -58,7 +58,7 @@ export function Install(){
     <button type="button" className="step-trigger" aria-expanded={open} aria-controls={`step-panel-${i}`} onClick={()=>setActive(open?null:i)}>
      <span className="step-num">{String(i+1).padStart(2,"0")}</span><span className="step-title-area"><span className="step-label">{step.label}</span><strong>{step.title}</strong><span className="step-short">{step.short}</span></span><span className="step-chevron"><ChevronDown size={19}/></span>
     </button>
-    {open && <div className="step-panel" id={`step-panel-${i}`}><div className="step-prose">{step.paragraphs.map((p,n)=><p key={n}>{p}</p>)}</div>{step.code && <CopySnippet code={step.code}/>} {step.note && <div className="step-note"><ShieldCheck size={16}/><span>{step.note}</span></div>}{step.links && <div className="step-links">{step.links.map((l)=><a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">{l.label}<ArrowUpRight size={14}/></a>)}</div>}</div>}
+    {open && <div className="step-panel" id={`step-panel-${i}`}><div className="step-prose">{step.paragraphs.map((p,n)=><p key={n}>{p}</p>)}</div>{step.code && <CopySnippet code={step.code}/>} {step.note && <div className="step-note"><ShieldCheck size={16}/><span>{step.note}</span></div>}{step.links && <div className="step-links">{step.links.map((l)=><a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" data-umami-event={l.href.startsWith("https://github.com/") ? "github_click" : undefined} data-umami-event-placement="install_steps" data-umami-event-destination="documentation">{l.label}<ArrowUpRight size={14}/></a>)}</div>}</div>}
    </article>})}
    <div className="after-steps"><CheckCircle2 size={22}/><div><strong>Готово — можно работать.</strong><p>Если инструменты ответили из ChatGPT, McpGo подключён. Теперь можно настроить сценарии под себя.</p></div></div></div>
  </div></section>;
