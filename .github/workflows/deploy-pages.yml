@@ -39,8 +39,8 @@ jobs:
         env:
           NEXT_TELEMETRY_DISABLED: '1'
           NEXT_PUBLIC_SITE_URL: https://mcpgo.ru
-          # Until mcpgo.ru moves from Vercel, use /mcpgo-next on github.io.
-          # Set repo variable PAGES_CUSTOM_DOMAIN=true before a future domain cutover.
+          # Main site: mcpgo.ru (repo variable PAGES_CUSTOM_DOMAIN=true).
+          # Set false only if switching back to a project path on github.io.
           NEXT_PUBLIC_BASE_PATH: ${{ vars.PAGES_CUSTOM_DOMAIN == 'true' && '/' || '/mcpgo-next' }}
 
       - name: Configure GitHub Pages

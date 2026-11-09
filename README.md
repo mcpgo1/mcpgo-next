@@ -68,10 +68,10 @@ public/mcpgo-real-example.png — побайтовая копия предост
 
 ## Публикация сайта
 
-Этот репозиторий содержит только Next.js-сайт и **не** публикует само настольное приложение McpGo. Инструкции для создания GitHub-репозитория сайта, интеграции с Vercel и подключения `mcpgo.ru`: **[DEPLOYMENT.md](./DEPLOYMENT.md)**.
+Этот репозиторий содержит только Next.js-сайт и **не** публикует само настольное приложение McpGo. Рабочий хостинг — GitHub Pages с доменом `mcpgo.ru`; инструкция: **[GITHUB_PAGES.md](./GITHUB_PAGES.md)**.
 
-Для корректной сборки используйте Node.js 22 и `npm ci`. GitHub Actions проверяет исходники на `main` и PR. Для автодеплоя в существующий проект Vercel предусмотрен отдельный [workflow](.github/workflows/deploy-vercel.yml) с project-scoped токеном; процедура его включения описана в [DEPLOYMENT.md](./DEPLOYMENT.md).
+Для корректной сборки используйте Node.js 22 и `npm ci`. GitHub Actions проверяет исходники на `main` и PR, а также автоматически публикует статический экспорт на GitHub Pages. Vercel оставлен только как исторический резервный проект; автоматический Vercel-деплой отключён.
 
 ## GitHub Pages
 
-Сайт поддерживает `output: "export"` для GitHub Pages. Порядок публикации и тестирования под `github.io/mcpgo-next` (затем `mcpgo.ru`) — в [GITHUB_PAGES.md](./GITHUB_PAGES.md).
+Сайт работает на GitHub Pages с `output: "export"` и основным доменом `mcpgo.ru`. Рабочая инструкция — [GITHUB_PAGES.md](./GITHUB_PAGES.md).
