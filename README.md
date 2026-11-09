@@ -10,7 +10,7 @@ npm ci
 npm run dev
 ```
 
-Откройте http://localhost:3000. Полная проверка перед публикацией: `npm run check` (lint, TypeScript, production-сборка). Запуск production-сборки — `npm run start`.
+Откройте http://localhost:3000. Полная проверка перед публикацией: `npm run check` (lint, TypeScript, production-сборка). Статический результат находится в `out/`; для локальной проверки: `python3 -m http.server 3000 --directory out`.
 
 ## Настройки
 
@@ -71,3 +71,7 @@ public/mcpgo-real-example.png — побайтовая копия предост
 Этот репозиторий содержит только Next.js-сайт и **не** публикует само настольное приложение McpGo. Инструкции для создания GitHub-репозитория сайта, интеграции с Vercel и подключения `mcpgo.ru`: **[DEPLOYMENT.md](./DEPLOYMENT.md)**.
 
 Для корректной сборки используйте Node.js 22 и `npm ci`. GitHub Actions проверяет исходники на `main` и PR. Для автодеплоя в существующий проект Vercel предусмотрен отдельный [workflow](.github/workflows/deploy-vercel.yml) с project-scoped токеном; процедура его включения описана в [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+## GitHub Pages
+
+Сайт поддерживает `output: "export"` для GitHub Pages. Порядок публикации и тестирования под `github.io/mcpgo-next` (затем `mcpgo.ru`) — в [GITHUB_PAGES.md](./GITHUB_PAGES.md).

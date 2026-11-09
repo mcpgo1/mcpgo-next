@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { publicPath } from "./site-path";
 import { Check, Clipboard, Globe2, Layers3, LockKeyhole, ShieldCheck, Terminal, TimerReset, Zap } from "lucide-react";
 
 export function Brand({ minimal=false }:{ minimal?:boolean }) {
-  return <a className="brand" href="#top" aria-label="McpGo — наверх"><span className="brand-icon"><Image src="/mcpgo-mark.svg" alt="" width={35} height={35}/></span><span className="brand-word">mcp<span>go</span></span>{!minimal && <span className="brand-tag">OPEN SOURCE</span>}</a>;
+  return <a className="brand" href="#top" aria-label="McpGo — наверх"><span className="brand-icon"><Image src={publicPath("/mcpgo-mark.svg")} alt="" width={35} height={35}/></span><span className="brand-word">mcp<span>go</span></span>{!minimal && <span className="brand-tag">OPEN SOURCE</span>}</a>;
 }
 
 export function CopySnippet({ code }:{ code:string }) {

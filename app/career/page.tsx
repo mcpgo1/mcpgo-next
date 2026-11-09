@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { publicPath } from "../site-path";
 import Link from "next/link";
 import { ArrowDownToLine, ArrowLeft, ArrowUpRight, AtSign, FileText, Send } from "lucide-react";
 import { Header } from "../home-top";
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
   openGraph: { title: "Я ищу работу — Андрей Смотров", url: "/career" },
 };
 
-const resumePdf = "/resume.pdf";
+const resumePdf = publicPath("/resume.pdf");
 
 const resumePages = [
-  { src: "/resume-page-1.png", number: "01", alt: "Первая страница резюме Андрея Смотрова: профиль, опыт разработки GAFUS и Статзавода." },
-  { src: "/resume-page-2.png", number: "02", alt: "Вторая страница резюме Андрея Смотрова: McpGo, Telegram-проект, предыдущий опыт, навыки и образование." },
+  { src: publicPath("/resume-page-1.png"), number: "01", alt: "Первая страница резюме Андрея Смотрова: профиль, опыт разработки GAFUS и Статзавода." },
+  { src: publicPath("/resume-page-2.png"), number: "02", alt: "Вторая страница резюме Андрея Смотрова: McpGo, Telegram-проект, предыдущий опыт, навыки и образование." },
 ];
 
 export default function CareerPage() {

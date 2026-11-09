@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { publicPath } from "./site-path";
 import { ArrowDown, ArrowUpRight, Code2, Github, Heart, X } from "lucide-react";
 import { Brand } from "./components";
 import { DOCS, faqs, GITHUB, TELEGRAM_COMMUNITY_URL } from "./data";
@@ -9,7 +10,7 @@ import { DOCS, faqs, GITHUB, TELEGRAM_COMMUNITY_URL } from "./data";
 export function OpenSource(){
  return <section className="open-source-section section"><div className="container open-source-grid">
    <div className="open-source-copy"><div className="section-eyebrow"><span className="slash">{"//"}</span> OPEN SOURCE</div><div className="open-source-mark"><Code2 size={32}/></div><h2>Свободный код.<br/><span className="gradient-word">Без платы за McpGo.</span></h2><p>McpGo создаётся как бесплатный проект с открытым исходным кодом. Изучай архитектуру, предлагай улучшения, собирай свою версию и участвуй в развитии.</p><div className="license-line"><span className="license-symbol">MIT</span><span>Лицензия MIT <small>Для собственного кода. У сторонних компонентов — свои условия.</small></span></div><a className="btn btn-outline" href={GITHUB} target="_blank" rel="noopener noreferrer"><Github size={19}/> Исходный код на GitHub <ArrowUpRight size={17}/></a></div>
-   <div className="opensource-art" aria-hidden="true"><div className="art-glow"/><div className="art-center"><Image src="/mcpgo-mark.svg" alt="" width={183} height={183}/></div><div className="art-ring art-ring-one"/><div className="art-ring art-ring-two"/><div className="art-label label-top"><span className="small-square"/> PUBLIC SOURCE</div><div className="art-label label-bottom"><Heart size={14}/> BUILT WITH CURIOSITY</div><div className="art-code art-code-1">&lt;/&gt;</div><div className="art-code art-code-2">{"{ }"}</div></div>
+   <div className="opensource-art" aria-hidden="true"><div className="art-glow"/><div className="art-center"><Image src={publicPath("/mcpgo-mark.svg")} alt="" width={183} height={183}/></div><div className="art-ring art-ring-one"/><div className="art-ring art-ring-two"/><div className="art-label label-top"><span className="small-square"/> PUBLIC SOURCE</div><div className="art-label label-bottom"><Heart size={14}/> BUILT WITH CURIOSITY</div><div className="art-code art-code-1">&lt;/&gt;</div><div className="art-code art-code-2">{"{ }"}</div></div>
  </div></section>;
 }
 

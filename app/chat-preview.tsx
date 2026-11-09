@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { publicPath } from "./site-path";
 
 export function ChatSiteExamplePreview() {
   return (
     <div className="real-shot-preview">
       <Image
-        src="/mcpgo-real-example.png"
+        src={publicPath("/mcpgo-real-example.png")}
         unoptimized
         width={1916}
         height={1189}

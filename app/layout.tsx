@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 import { SITE_URL } from "./site-url";
+import { publicPath } from "./site-path";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description: "Код, сборки и тесты в ChatGPT через официальный MCP. Без отдельной оплаты Codex API, с обычными лимитами ChatGPT.",
     url: "/",
   },
-  icons: { icon: "/mcpgo-mark.svg", apple: "/mcpgo-mark.svg" },
+  icons: { icon: publicPath("/mcpgo-mark.svg"), apple: publicPath("/mcpgo-mark.svg") },
   twitter: {
     card: "summary_large_image",
     title: "McpGo — ваш Mac. Ваш AI.",

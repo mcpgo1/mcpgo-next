@@ -1,8 +1,7 @@
 name: Deploy website to Vercel
 
 on:
-  push:
-    branches: [main]
+  # Kept as a manual fallback while testing GitHub Pages; no automatic Vercel publishes.
   workflow_dispatch:
 
 permissions:
