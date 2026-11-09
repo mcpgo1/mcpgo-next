@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowDownToLine, ArrowLeft, ArrowUpRight, AtSign, FileText, Send } from "lucide-react";
 import { Header } from "../home-top";
 import { Footer } from "../home-bottom";
+import { UmamiTracker } from "../umami-tracker";
 
 export const metadata: Metadata = {
   title: "Я ищу работу — Андрей Смотров",
@@ -23,6 +24,7 @@ const resumePages = [
 export default function CareerPage() {
   return (
     <div className="page-shell career-page">
+      <UmamiTracker />
       <div className="global-glow" aria-hidden="true" />
       <Header />
       <main id="career">

@@ -32,3 +32,9 @@ DNS-серверы остаются `ns1.reg.ru` / `ns2.reg.ru`, NS менять
 Старый Vercel-проект `mcpgo-next` (`https://mcpgo-next.vercel.app`) не удалён, но GitHub Actions workflow Vercel доступен только вручную, а переменная `VERCEL_AUTO_DEPLOY_ENABLED=false`. Не переключайте DNS обратно на Vercel без предварительной проверки сборки и TLS.
 
 Документация: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site и https://nextjs.org/docs/app/guides/static-exports.
+
+## Аналитика посещений
+
+Для сборки в GitHub Repository Variables установлены `UMAMI_WEBSITE_ID` и `UMAMI_SHARE_URL` (публичные значения, без паролей). Отчёт отображается на отдельном статическом маршруте, не указанном в меню и sitemap; `noindex` присутствует в метаданных страницы. Поскольку репозиторий публичный, отсутствие ссылки не гарантирует конфиденциальность.
+
+На основных страницах используется клиентский трекер Umami, не зависящий от GitHub Pages API. Аналитика страницы отчёта не включается в основную статистику.
