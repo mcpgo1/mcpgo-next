@@ -5,7 +5,7 @@
  */
 export const WINDOWS_VERSION = "2.1.0-preview.1";
 export const WINDOWS_TAG = "v" + WINDOWS_VERSION;
-export const WINDOWS_INSTALLER = "McpGo Setup " + WINDOWS_VERSION + ".exe";
+export const WINDOWS_INSTALLER = "McpGo.Setup." + WINDOWS_VERSION + ".exe";
 export const WINDOWS_SHA256 = "f5788496c3369f689e4015b8263d8edb90f273cb0d19e2028ce88bb7c8407b72";
 export const WINDOWS_REPOSITORY = "https://github.com/mcpgo1/McpGo";
 export const WINDOWS_RELEASE_URL = WINDOWS_REPOSITORY + "/releases/tag/" + WINDOWS_TAG;
