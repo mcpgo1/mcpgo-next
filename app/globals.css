@@ -1057,3 +1057,11 @@ h1,h2,h3,p{margin-top:0}
  .header-nav-postscript .header-postscript-text{font-size:12px}
  .header-nav-postscript .header-postscript-label{font-size:17px}
 }
+
+/* Optional Windows beta branch beside the existing macOS installer. */
+.windows-landing-card{border:1px solid #536e92;background:radial-gradient(ellipse at 100% 0,#2a426544,transparent 65%),#17202c;border-radius:14px;padding:25px;margin:20px 0}
+.windows-landing-tag{display:flex;align-items:center;gap:8px;font:700 10px "JetBrains Mono",monospace;color:#b0d7ff;letter-spacing:.5px}
+.windows-landing-card h3{font:800 21px/1.3 "Manrope",sans-serif;letter-spacing:-.5px;margin:13px 0 9px}
+.windows-landing-card p{font-size:12px;line-height:1.8;color:#a8bbc7;margin:0 0 18px}
+.windows-landing-card .btn{display:inline-flex;gap:10px;align-items:center;min-height:44px;padding:10px 17px;font-size:12px}
+.windows-landing-card small{display:block;color:#819bab;line-height:1.6;font-size:10px;margin-top:14px}

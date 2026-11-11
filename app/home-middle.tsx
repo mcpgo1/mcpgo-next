@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { ArrowUpRight, Check, CheckCircle2, ChevronDown, Cpu, Download, Globe2, LockKeyhole, ShieldCheck, Terminal } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, Check, CheckCircle2, ChevronDown, Cpu, Download, Globe2, LockKeyhole, MonitorDown, ShieldCheck, Terminal } from "lucide-react";
 import { CopySnippet } from "./components";
 import { DOCS, DMG_DOWNLOAD_URL, steps } from "./data";
 import { ArchitectureFlow } from "./architecture-flow";
@@ -44,6 +45,13 @@ export function Install(){
          <div><strong>03</strong><span><b>Открой</b> приложение и выбери «Первое подключение».</span></div>
        </div>
        <a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-umami-event="download_click" data-umami-event-placement="install" data-umami-event-file="McpGo-2.0.3-macos-arm64.dmg"><Download size={17}/> Скачать McpGo 2.0.3 (.dmg) <ArrowUpRight size={16}/></a>
+     </div>
+     <div className="windows-landing-card">
+       <div className="windows-landing-tag"><MonitorDown size={17}/> WINDOWS 11 / PREVIEW</div>
+       <h3>McpGo теперь есть и для Windows.</h3>
+       <p>Экспериментальный установщик .exe для Windows 11 x64. Без цифровой подписи — с открытым кодом, SHA-256 и инструкцией для SmartScreen. Никаких платных сертификатов.</p>
+       <Link href="/windows" className="btn btn-secondary" data-umami-event="windows_preview_click" data-umami-event-placement="install">Windows Preview · Скачать и проверить <ArrowUpRight size={15}/></Link>
+       <small>Скачивание доступно только после публикации проверенного релиза на GitHub.</small>
      </div>
      <div className="tunnel-focus">
        <div className="tunnel-focus-head"><LockKeyhole size={19}/><div><strong>Самое главное — два Secure MCP Tunnel</strong><span>Мастер проведёт через их создание, ключи доступа и подключение к ChatGPT.</span></div></div>

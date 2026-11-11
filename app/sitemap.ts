@@ -13,5 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date("2026-11-08T00:00:00Z"),
     changeFrequency: "monthly",
     priority: 0.7,
+  }, {
+    url: `${SITE_URL}/windows`,
+    lastModified: new Date("2026-11-11T00:00:00Z"),
+    changeFrequency: "monthly",
+    priority: 0.8,
   }];
 }
