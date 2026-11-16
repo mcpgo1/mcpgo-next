@@ -63,7 +63,9 @@ export default function WindowsPage() {
           <article><span>04</span><h3>Настрой подключение</h3>
             <p>В приложении создай два Secure MCP Tunnels с явным подтверждением
               или введи существующие. Для браузерных инструментов понадобится
-              расширение Playwright MCP в личном Chrome/Edge.</p>
+              <a href="https://chromewebstore.google.com/detail/playwright-extension/mmlmfjhmonkocbjadbfplnigmagldckm" target="_blank" rel="noopener noreferrer">официальное Playwright Extension</a> в личном Chrome/Edge:
+              установи расширение из магазина, затем открой Manage clients, скопируй
+              PLAYWRIGHT_MCP_EXTENSION_TOKEN и вставь его в приложение.</p>
           </article>
         </div>
       </section>
