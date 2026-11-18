@@ -34,7 +34,7 @@ export function Plans(){
     <div className="plans-roadmap-row"><span className="plans-roadmap-no">01</span><div><strong>Надёжность взаимодействия</strong><p>Более устойчивый обмен задачами и сообщениями между агентами.</p></div></div>
     <div className="plans-roadmap-row"><span className="plans-roadmap-no">02</span><div><strong>Контроль выполнения</strong><p>Понятные состояния задач, обработка зависаний и восстановление работы.</p></div></div>
     <div className="plans-roadmap-row"><span className="plans-roadmap-no">03</span><div><strong>Удобная оркестрация</strong><p>Проще настраивать совместную работу агентов и видеть, что происходит.</p></div></div>
-    <div className="plans-roadmap-row plans-roadmap-future"><span className="plans-roadmap-no">04</span><div><strong>Клиент McpGo для Windows</strong><p>В планах — отдельная версия приложения для Windows, чтобы пользоваться McpGo не только на Mac. Сроки выпуска пока не объявлены.</p><span className="plans-future-label">В ПЛАНАХ</span></div></div>
+    <div className="plans-roadmap-row plans-roadmap-future"><span className="plans-roadmap-no">04</span><div><strong>Windows Preview и диагностика</strong><p>Уже доступен экспериментальный Windows 11 x64 установщик. В новой версии можно экспортировать подробную диагностику первого подключения в ZIP, чтобы проще находить причины сбоев.</p><span className="plans-future-label">PREVIEW</span></div></div>
     <p className="plans-roadmap-footnote">Это направления развития, а не готовые функции или обещание конкретных сроков.</p>
    </div>
   </div>

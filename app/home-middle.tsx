@@ -33,18 +33,18 @@ export function Install(){
      <div className="requirements-bundled"><CheckCircle2 size={16}/> Node.js, Python и локальные компоненты уже включены в DMG.</div>
      <a href={`${DOCS}/ONBOARDING.md`} target="_blank" rel="noopener noreferrer" data-umami-event="github_click" data-umami-event-placement="install" data-umami-event-destination="onboarding">Подробно о мастере подключения <ArrowUpRight size={15}/></a>
     </div>
-    <p className="install-caution"><span>!</span> McpGo 2.1.2 уже опубликован: DMG подписан и нотарифицирован Apple. Версия рассчитана на macOS 14+ и Apple Silicon.</p>
+    <p className="install-caution"><span>!</span> McpGo 2.1.3 уже опубликован: DMG подписан и нотарифицирован Apple. Версия рассчитана на macOS 14+ и Apple Silicon.</p>
    </aside>
    <div className="steps">
      <div className="dmg-install-guide">
        <div className="dmg-install-label"><ShieldCheck size={16}/> ПОДПИСАНО И НОТАРИФИЦИРОВАНО APPLE</div>
        <h3>Три действия — и можно настраивать.</h3>
        <div className="dmg-install-items">
-         <div><strong>01</strong><span><b>Скачай</b> McpGo 2.1.2 (.dmg) по кнопке ниже.</span></div>
+         <div><strong>01</strong><span><b>Скачай</b> McpGo 2.1.3 (.dmg) по кнопке ниже.</span></div>
          <div><strong>02</strong><span><b>Перетащи</b> McpGo.app в папку «Программы».</span></div>
          <div><strong>03</strong><span><b>Открой</b> приложение и выбери «Первое подключение».</span></div>
        </div>
-       <a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-umami-event="download_click" data-umami-event-placement="install" data-umami-event-file="McpGo-2.1.2-macos-arm64.dmg"><Download size={17}/> Скачать McpGo 2.1.2 (.dmg) <ArrowUpRight size={16}/></a>
+       <a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-umami-event="download_click" data-umami-event-placement="install" data-umami-event-file="McpGo-2.1.3-macos-arm64.dmg"><Download size={17}/> Скачать McpGo 2.1.3 (.dmg) <ArrowUpRight size={16}/></a>
      </div>
      <div className="windows-landing-card">
        <div className="windows-landing-tag"><MonitorDown size={17}/> WINDOWS 11 / PREVIEW</div>

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Code2, Coins, Download, Github, Globe2, Laptop, Menu, MessageCircleMore, Monitor, Sparkles, Terminal, UsersRound, X, Zap } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Code2, Coins, Download, Github, Globe2, Laptop, Menu, MessageCircleMore, Monitor, ShieldCheck, Sparkles, Terminal, UsersRound, X, Zap } from "lucide-react";
 import { Brand } from "./components";
 import { ChatSiteExamplePreview } from "./chat-preview";
 import { GITHUB, DMG_DOWNLOAD_URL, features } from "./data";
@@ -31,7 +31,7 @@ export function Hero(){
     <div className="hero-benefit"><span className="hero-benefit-icon"><Zap size={22}/></span><div><strong>Кодинг как с Codex</strong><small>те же возможности</small></div></div>
     <div className="hero-benefit"><span className="hero-benefit-icon"><Monitor size={22}/></span><div><strong>Один чат везде</strong><small>без лагов и сопряжений</small></div></div>
    </div>
-   <div className="hero-ctas"><a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-umami-event="download_click" data-umami-event-placement="hero" data-umami-event-file="McpGo-2.1.2-macos-arm64.dmg"><Download size={18}/> Скачать McpGo 2.1.2 <ArrowRight size={17}/></a><Link href="/windows" className="btn btn-secondary" data-umami-event="windows_preview_click" data-umami-event-placement="hero"><Monitor size={18}/> Windows 11 · Preview <ArrowUpRight size={16}/></Link><a href={GITHUB} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" data-umami-event="github_click" data-umami-event-placement="hero" data-umami-event-destination="repository"><Github size={19}/> Смотреть на GitHub</a></div>
+   <div className="hero-ctas"><a href={DMG_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-umami-event="download_click" data-umami-event-placement="hero" data-umami-event-file="McpGo-2.1.3-macos-arm64.dmg"><Download size={18}/> Скачать McpGo 2.1.3 <ArrowRight size={17}/></a><Link href="/windows" className="btn btn-secondary" data-umami-event="windows_preview_click" data-umami-event-placement="hero"><Monitor size={18}/> Windows 11 · Preview <ArrowUpRight size={16}/></Link><a href={GITHUB} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" data-umami-event="github_click" data-umami-event-placement="hero" data-umami-event-destination="repository"><Github size={19}/> Смотреть на GitHub</a></div>
    <div className="hero-reassurance"><span><CheckCircle2 size={15}/> Бесплатно</span><span><CheckCircle2 size={15}/> Open source / MIT</span><span><CheckCircle2 size={15}/> macOS 14+ / Apple Silicon</span></div>
   </div>
   <div className="hero-visual"><div className="visual-mesh"/><div className="orbit orbit-one"/><div className="orbit orbit-two"/><ChatSiteExamplePreview/><p className="hero-shot-caption"><Sparkles size={16} aria-hidden="true"/><span>На создание этого сайта и <strong>приложения McpGo не было потрачено ни одного токена :D</strong></span></p></div>
@@ -39,7 +39,7 @@ export function Hero(){
  <div className="ticker"><div className="container ticker-inner"><div className="ticker-intro"><span className="ticker-mini">MCP GO</span> Один чат. Реальные действия.</div><div className="ticker-items"><span><Code2 size={15}/> Coding</span><span><MessageCircleMore size={15}/> Same chat</span><span><Coins size={15}/> No extra Codex API</span><span><Globe2 size={15}/> Browser</span></div></div></div></>;
 }
 
-const icons = {code:Code2,messages:MessageCircleMore,parallel:UsersRound,coins:Coins,terminal:Terminal,devices:Laptop,chrome:Globe2};
+const icons = {code:Code2,messages:MessageCircleMore,parallel:UsersRound,coins:Coins,terminal:Terminal,devices:Laptop,chrome:Globe2,shield:ShieldCheck};
 export function Features(){
  return <section id="features" className="section features-section container">
   <div className="section-heading"><div><div className="section-eyebrow"><span className="slash">{"//"}</span> ВОЗМОЖНОСТИ</div><h2>Коди как с агентом.<br/><span className="muted-heading">Оставайся в своём чате.</span></h2></div><p>Основная идея McpGo: AI пишет и проверяет код на твоём компьютере, а ты продолжаешь работу в одном привычном диалоге ChatGPT — даже с другого устройства.</p></div>
