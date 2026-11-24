@@ -3,10 +3,10 @@
  * enabled only when the public release API confirms the expected installer.
  * The digest must be updated from the final independently audited build.
  */
-export const WINDOWS_VERSION = "2.1.0-preview.6";
+export const WINDOWS_VERSION = "2.1.0-preview.7";
 export const WINDOWS_TAG = "v" + WINDOWS_VERSION;
 export const WINDOWS_INSTALLER = "McpGo.Setup." + WINDOWS_VERSION + ".exe";
-export const WINDOWS_SHA256 = "0a8b9b9ae87043e6ed5b4d0fc044e7a83707b63c8da3e5c8b792bde6a674c48f";
+export const WINDOWS_SHA256 = "23439fa0369bc122177a6266ee44c856ffdc0174ffaf625673a303b3f69e66fe";
 export const WINDOWS_REPOSITORY = "https://github.com/mcpgo1/McpGo";
 export const WINDOWS_RELEASE_URL = WINDOWS_REPOSITORY + "/releases/tag/" + WINDOWS_TAG;
 export const WINDOWS_RELEASES_URL = WINDOWS_REPOSITORY + "/releases";
