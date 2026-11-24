@@ -52,7 +52,7 @@ DNS-серверы остаются `ns1.reg.ru` / `ns2.reg.ru`, NS менять
   подписью издателя.
 - При новом Windows Preview обновить версию + SHA-256 после финальной сборки и
   ещё раз проверить release assets на GitHub. Релиз всегда `prerelease` и не
-  заменяет стабильный macOS 2.1.3.
+  заменяет стабильный macOS 2.1.4.
 - Клик по реальному скачиванию Windows помечается в Umami
   `download_click` с `platform=windows`; переход на страницу — отдельным
   `windows_preview_click`.
